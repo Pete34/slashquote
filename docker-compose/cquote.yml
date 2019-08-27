@@ -1,0 +1,13 @@
+version: '3'
+services:
+  slashquote:
+    build:
+      context: ../
+      dockerfile: cquote.dockerfile
+    networks:
+      - cquotenet
+    ports:
+      - '3000:3000'
+networks:
+  cquotenet:
+    driver: bridge
